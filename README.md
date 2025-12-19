@@ -1,0 +1,1 @@
+The BSL package provides a comprehensive toolkit for learning the structure of Directed Acyclic Graphs (DAGs) from observational data. It implements a novel Bayesian approach for DAG-Probit models, utilizing Laplace approximation for efficient structure learning and causal effect estimation.
