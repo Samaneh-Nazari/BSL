@@ -1,0 +1,22 @@
+Package: BSL
+Type: Package
+Title: A Core Toolkit for Bayesian Structure Learning of DAGs
+Version: 0.1.0
+Authors@R: c(
+    person("Samaneh", "Nazari", email = "asemaneh1369@gmail.com", role = c("aut", "cre")),
+    person("Mohammad", "Arashi", email = "arashi@um.ac.ir", role = "aut", comment = c(ORCID = "0000-0002-5881-9241")),
+    person("Abdolnasser", "Sadeghkhani", email = "asadeghkhani@ncat.edu", role = "aut")
+    )
+Maintainer: Samaneh Nazari <asemaneh1369@gmail.com>
+Description: Provides a comprehensive and extensible toolkit for the Bayesian analysis of Directed Acyclic Graphs (DAGs). The core functionality implements a novel and computationally efficient approach for structure learning, leveraging Laplace approximation to accurately estimate the posterior distribution over DAG structures. This package is designed as a foundational resource for causal discovery, enabling researchers to infer complex causal relationships from observational data.
+License: GPL-3
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
+Dependencies:
+URL: https://github.com/Samaneh-Nazari/Spak2.git
+LazyData: true
+Imports:  
+Suggests: 
+Depends: gRbase, mvtnorm, pcalg, truncnorm
+
