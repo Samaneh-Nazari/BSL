@@ -69,7 +69,7 @@ posterior_sigma = function(Y, A, g, a){
     L_j = matrix(0, 1, ncol = p_j)
 
     if(length(pa_j) == 0){
-      D_jj =(rgamma(1,n/2-a_j,sum(y^2)/2))^(-1)*rgamma(1,1,0.5*g)
+      D_jj =GIGrvg::rgig(1, lambda = a_j-n/2, chi = 2 *(sum(y^2)/2) , psi = g)
 
     } else{
 
@@ -77,7 +77,7 @@ posterior_sigma = function(Y, A, g, a){
 
       d = t(b_hat)%*%(diag(g, p_j) + t(XX)%*%XX)%*%b_hat
 
-      D_jj =(rgamma(1,n/2-a_j,sum(y^2)/2 - d/2))^(-1)*rgamma(1,1,0.5*g)
+      D_jj = GIGrvg::rgig(1, lambda = a_j-n/2, chi = 2 *(sum(y^2)/2 - d/2) , psi = g)
 
       L_j = rmvnorm(1, -b_hat, D_jj*solve(t(XX)%*%XX + diag(g, p_j)))
 
